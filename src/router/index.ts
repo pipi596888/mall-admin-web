@@ -66,7 +66,7 @@ const router = createRouter({
   routes
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
   const userStore = useUserStore()
   const token = userStore.token || localStorage.getItem('token')
 
